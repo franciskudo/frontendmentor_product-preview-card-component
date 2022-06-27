@@ -1,0 +1,163 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 1em;
+    width: 100%;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* start of code */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url(../fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+
+:root {
+    --color-primary-dark-cyan: hsl(158, 36%, 37%);
+    --color-primary-cream: hsl(30, 38%, 92%);
+    --color-accent-very-dark-blue: hsl(212, 21%, 14%);
+    --color-accent-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-accent-white: hsl(0, 0%, 100%);
+
+    font-size: 14px;
+
+}
+
+body {
+    background-color: var(--color-primary-cream);
+    font-family: Montserrat;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 2rem 1.5rem;
+}
+
+.item-card {
+    background-color: var(--color-accent-white);
+    border-radius: 1rem;
+    color: var(--color-accent-dark-grayish-blue);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item__details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.item__category {
+    text-transform: uppercase;
+    color: var(--color-accent-dark-grayish-blue);
+    letter-spacing: 3px;
+}
+
+.item__description {
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+
+.item__name {
+    font-family: Fraunces;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent-very-dark-blue);
+}
+
+.item__description {
+    column-gap: 2;
+}
+
+.item__price {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.item__price-current {
+    font-size: 2rem;
+    font-family: Fraunces;
+    color: var(--color-primary-dark-cyan);
+    font-weight: 700;
+}
+
+.item__price-original {
+    text-decoration: line-through;
+}
+
+.item__add-to-cart {
+    border: 0;
+    font-size: 1em;
+    font-family: Montserrat;
+    color: var(--color-accent-white);
+    font-weight: 700;
+    background-color: var(--color-primary-dark-cyan);
+    border-radius: .5em;
+    padding: 1em;
+    cursor: pointer;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.item__add-to-cart:hover,
+.item__add-to-cart:active,
+.item__add-to-cart:focus {
+    background-color: hsl(158, 36%, 10%);
+}
+
+.add-to-card-icon {
+    background-image:url(../images/icon-cart.svg);
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+}
+
+.item__preview {
+    height: 250px;
+    background-image: url(../images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position-x:center;
+}
+
+@media only screen and (min-width: 520px) {
+    body {
+        display: grid;
+        place-content: center;
+    }
+
+    .item-card {
+        flex-direction: row;
+        align-self: center;
+        justify-self: center;
+        width: 35em;
+    }
+
+    .item__preview {
+        flex-basis: 50%;
+        background-image: url(../images/image-product-desktop.jpg);
+        height: unset;
+    }
+
+    .item__details {
+        flex-basis: 50%;
+    }
+}
