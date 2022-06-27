@@ -76,11 +76,12 @@ body {
     line-height: 1.5;
 }
 
-.item__name {
+h1.item__name {
     font-family: Fraunces;
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-accent-very-dark-blue);
+    margin: 0;
 }
 
 .item__description {
